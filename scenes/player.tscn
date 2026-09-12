@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://l0dl11isvdqt"]
+
+[ext_resource type="Texture2D" uid="uid://bso332fw68pb8" path="res://assets/gudguy.png" id="1_3vyb7"]
+
+[node name="player" type="Node2D" unique_id=1553527496]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=378913602]
+position = Vector2(-115.00003, 62)
+scale = Vector2(6.7, 6.7)
+texture = ExtResource("1_3vyb7")

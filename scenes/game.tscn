@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://fsft7fald1wi"]
+
+[ext_resource type="PackedScene" uid="uid://l0dl11isvdqt" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://xoxkonuj8xe4" path="res://scenes/player.gd" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dncm0j7edqabg" path="res://scenes/enemy.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://is0l0ilsi6gp" path="res://scenes/battle_manager.gd" id="4_iywne"]
+[ext_resource type="Script" uid="uid://dbeb4m46ea0kt" path="res://scenes/enemy.gd" id="4_p57ef"]
+
+[node name="Game" type="Node2D" unique_id=202316591]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=174772507]
+
+[node name="player" parent="." unique_id=1553527496 instance=ExtResource("1_uwrxv")]
+script = ExtResource("2_lbhrr")
+
+[node name="enemy" parent="." unique_id=1856950119 instance=ExtResource("2_yqjtg")]
+script = ExtResource("4_p57ef")
+
+[node name="BattleManager" type="Node2D" parent="." unique_id=558053368]
+script = ExtResource("4_iywne")

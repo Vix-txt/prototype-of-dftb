@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dncm0j7edqabg"]
+
+[ext_resource type="Texture2D" uid="uid://dqpcsqlronpom" path="res://assets/badguy.png" id="1_7p1mj"]
+
+[node name="enemy" type="Node2D" unique_id=1856950119]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1169925257]
+position = Vector2(260, -69.999985)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("1_7p1mj")
