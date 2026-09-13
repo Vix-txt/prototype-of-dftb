@@ -5,16 +5,24 @@
 [ext_resource type="PackedScene" uid="uid://dncm0j7edqabg" path="res://scenes/enemy.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://is0l0ilsi6gp" path="res://scenes/battle_manager.gd" id="4_iywne"]
 [ext_resource type="Script" uid="uid://dbeb4m46ea0kt" path="res://scenes/enemy.gd" id="4_p57ef"]
+[ext_resource type="PackedScene" uid="uid://caa31dheww1xs" path="res://scenes/BattleUI.tscn" id="6_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=202316591]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=174772507]
 
 [node name="player" parent="." unique_id=1553527496 instance=ExtResource("1_uwrxv")]
+unique_name_in_owner = true
+position = Vector2(4, 0)
 script = ExtResource("2_lbhrr")
 
 [node name="enemy" parent="." unique_id=1856950119 instance=ExtResource("2_yqjtg")]
+unique_name_in_owner = true
+position = Vector2(0, 4)
 script = ExtResource("4_p57ef")
 
 [node name="BattleManager" type="Node2D" parent="." unique_id=558053368]
+position = Vector2(-4, -1)
 script = ExtResource("4_iywne")
+
+[node name="BattleUI" parent="." unique_id=1484319620 instance=ExtResource("6_p57ef")]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://caa31dheww1xs"]
+
+[ext_resource type="Script" uid="uid://bcgn10qf52dy6" path="res://scenes/fight_button.gd" id="1_d17lq"]
+
+[node name="BattleUI" type="CanvasLayer" unique_id=329322007]
+
+[node name="Control" type="Control" parent="." unique_id=869139481]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FightButton" type="Button" parent="Control" unique_id=2047318990]
+layout_mode = 1
+offset_left = 114.0
+offset_top = 310.0
+offset_right = 265.0
+offset_bottom = 534.0
+pivot_offset = Vector2(549, -62)
+action_mode = 0
+text = "FIGHT"
+script = ExtResource("1_d17lq")
+
+[connection signal="pressed" from="Control/FightButton" to="Control/FightButton" method="_on_pressed"]
