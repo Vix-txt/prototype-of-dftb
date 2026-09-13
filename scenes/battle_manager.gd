@@ -18,18 +18,19 @@ func playerattack():
 			enemy.take_damage(player.damage)
 			if enemy.health > 0:	
 				print("Enemy health: ", enemy.health)
-			death()
-
 			if dead == false:
 				turn = "enemy"
+				death()
 				enemyattack()
 func enemyattack():
+	await get_tree().create_timer(1.5).timeout
 	if dead == false:	
 		if turn == "enemy":
 			player.take_damage(enemy.damage)
 			if player.health > 0:	
 				print("Player health: ", player.health)
 			turn = "player"
+			death()
 
 func death():
 	if player.health <= 0:

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://caa31dheww1xs"]
 
 [ext_resource type="Script" uid="uid://bcgn10qf52dy6" path="res://scenes/fight_button.gd" id="1_d17lq"]
+[ext_resource type="Script" uid="uid://y1vwcepuhnjm" path="res://scenes/heal_button.gd" id="2_ktx7n"]
 
 [node name="BattleUI" type="CanvasLayer" unique_id=329322007]
 
@@ -16,13 +17,24 @@ grow_vertical = 2
 
 [node name="FightButton" type="Button" parent="Control" unique_id=2047318990]
 layout_mode = 1
-offset_left = 114.0
-offset_top = 310.0
-offset_right = 265.0
-offset_bottom = 534.0
+offset_left = 55.0
+offset_top = 384.0
+offset_right = 206.0
+offset_bottom = 608.0
 pivot_offset = Vector2(549, -62)
 action_mode = 0
 text = "FIGHT"
 script = ExtResource("1_d17lq")
 
+[node name="HealButton" type="Button" parent="Control" unique_id=1169639102]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 148.0
+offset_right = 201.0
+offset_bottom = 376.0
+text = "HEAL
+"
+script = ExtResource("2_ktx7n")
+
 [connection signal="pressed" from="Control/FightButton" to="Control/FightButton" method="_on_pressed"]
+[connection signal="pressed" from="Control/HealButton" to="Control/HealButton" method="_on_pressed"]
