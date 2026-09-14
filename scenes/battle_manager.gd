@@ -1,5 +1,4 @@
 extends Node2D
-
 @onready var player:= %"player"
 @onready var enemy:= %"enemy"
 var turn:= "player"
