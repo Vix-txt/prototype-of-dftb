@@ -16,11 +16,11 @@ func heal():
 	if battlemanager.dead != true:
 		if health + 25 < max_health and battlemanager.turn == "player":
 			health += 25
-			print("Player health : ", health)
+			print("Player has healed : ", health)
 			healed += 1
 		if health + 25 > max_health and battlemanager.turn == "player":
 			health = max_health
-			print("Player is at max health! : ", health)
+			print("Player is at max health : ", health)
 			healed += 1
 		elif battlemanager.turn != "player":
 			print("Cannot heal, not your turn.")

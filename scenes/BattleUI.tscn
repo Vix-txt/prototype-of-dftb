@@ -17,10 +17,10 @@ grow_vertical = 2
 
 [node name="FightButton" type="Button" parent="Control" unique_id=2047318990]
 layout_mode = 1
-offset_left = 55.0
-offset_top = 384.0
-offset_right = 206.0
-offset_bottom = 608.0
+offset_left = 53.0
+offset_top = 332.0
+offset_right = 204.0
+offset_bottom = 556.0
 pivot_offset = Vector2(549, -62)
 action_mode = 0
 text = "FIGHT"
@@ -28,10 +28,10 @@ script = ExtResource("1_d17lq")
 
 [node name="HealButton" type="Button" parent="Control" unique_id=1169639102]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 148.0
-offset_right = 201.0
-offset_bottom = 376.0
+offset_left = 53.0
+offset_top = 98.0
+offset_right = 204.0
+offset_bottom = 326.0
 text = "HEAL
 "
 script = ExtResource("2_ktx7n")
