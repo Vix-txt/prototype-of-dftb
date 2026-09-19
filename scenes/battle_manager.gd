@@ -1,6 +1,7 @@
 extends Node2D
 @onready var player:= %"player"
 @onready var enemy:= %"enemy"
+@onready var battletext:= $battletext
 var turn:= "player"
 var dead:= false
 
@@ -16,7 +17,7 @@ func playerattack():
 		if turn == "player":
 			enemy.take_damage(player.damage)
 			if enemy.health > 0:	
-				print("Enemy health: ", enemy.health)
+				battletext.display("Enemy health: ", enemy.health)
 			if dead == false:
 				turn = "enemy"
 				death()
@@ -27,14 +28,14 @@ func enemyattack():
 		if turn == "enemy":
 			player.take_damage(enemy.damage)
 			if player.health > 0:	
-				print("Player health: ", player.health)
+				battletext.display("Player health: ", player.health)
 			turn = "player"
 			death()
 
 func death():
 	if player.health <= 0:
-		print("Player has died.")
+		battletext.display("Player has died.")
 		dead = true
 	if enemy.health <= 0:
-		print("Enemy has died.")
+		battletext.display("Enemy has died.")
 		dead = true
